@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amore Antico</title>
+  <meta name="description" content="Amore Antico — Work in progress.">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    html, body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      background: #fff;
+      color: #171717;
+      font-family: Georgia, "Times New Roman", serif;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    main {
+      width: min(680px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 80px 0 64px;
+    }
+
+    .hero {
+      min-height: 62vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(38px, 6vw, 72px);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .status {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    .contact {
+      padding: 48px 0 0;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .contact h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+    }
+
+    .contact-intro {
+      margin: 0 0 32px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      line-height: 1.8;
+      letter-spacing: 0.04em;
+      color: #555;
+      text-transform: none;
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+      text-align: left;
+    }
+
+    label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: #333;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      margin-top: 7px;
+      padding: 13px 14px;
+      border: 1px solid #cfcfcf;
+      background: #fff;
+      color: #171717;
+      font: 14px Arial, Helvetica, sans-serif;
+      border-radius: 0;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    button {
+      justify-self: center;
+      min-width: 150px;
+      padding: 12px 24px;
+      border: 1px solid #171717;
+      background: #171717;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #fff;
+      color: #171717;
+    }
+
+    .form-note {
+      margin: 8px 0 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      line-height: 1.7;
+      color: #777;
+      text-align: center;
+      text-transform: none;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="hero">
+      <h1>Amore Antico</h1>
+      <p class="status">Work in progress</p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>お問い合わせ</h2>
+      <p class="contact-intro">
+        Amore Anticoへのお問い合わせは、下記フォームよりお願いいたします。
+      </p>
+
+      <form action="https://formspree.io/f/xppzjpvw" method="POST">
+
+        <input
+          type="text"
+          name="_gotcha"
+          style="display:none"
+          tabindex="-1"
+          autocomplete="off"
+        >
+
+        <label>
+          お名前
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+
+        <label>
+          メールアドレス
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+
+        <label>
+          お問い合わせ内容
+          <textarea name="message" required></textarea>
+        </label>
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="Amore Antico website inquiry"
+        >
+
+        <button type="submit">送信</button>
+
+        <p class="form-note">
+          送信いただいた内容は、お問い合わせへの対応のためにのみ使用いたします。
+        </p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
